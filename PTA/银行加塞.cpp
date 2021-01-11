@@ -1,10 +1,10 @@
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
-const int N = 1e4 + 7, M = 5e5 + 7;
+const int N = 1e4 + 7, M = 1.8e5 + 7;
 //用map将名字字符串散列成下标
 int rt[M];
-inline int map(char a[]) { return (a[0]-'A')*26 + (a[1]-'A')*26*26 + (a[2]-'A')*26*26*26; }
+inline int map(char a[]) { return (a[0]-'A') + (a[1]-'A')*26 + (a[2]-'A')*26*26; }
 struct People {
     char name[5];
     //t为到达时间，p为业务时间，w为该客户的等待时间
